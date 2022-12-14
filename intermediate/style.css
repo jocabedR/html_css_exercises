@@ -1,0 +1,13 @@
+/*Inport css documets. Styles were applied in the order that they are imported.*/
+@import "./reset-styles.css";
+@import "./variables.css"; /*In this documents we only declared variables.*/
+
+body {
+  background-color: var(--light-color); /*Example of using a variable from varianles.css*/
+  font-family: 'Jost', sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: calc(var(--space-unit) * 5) auto 0; /*Functions like calc() can be used to set value of a css propertie.*/
+}

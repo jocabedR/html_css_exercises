@@ -1,0 +1,6 @@
+:root { /*Varibles declared in root can be used in the whole css document.*/
+  /* COLORS */
+  --light-color: #efefef; /*In CSS variables are declared with doble "-" and if its name needs more tha one word "-" can be used to join them.*/
+  /* UNITS */
+  --space-unit: 8px;
+}
