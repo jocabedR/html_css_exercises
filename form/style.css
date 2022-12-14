@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("./assets/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fe7a78;
+  height: 100vh;
+  width: 100vw;
+}
+
+aside {
+  color: white;
+}
+
+aside h1 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.callout {
+  background-color: #5d54a3;
+  color: white;
+  padding: 10px;
+  box-shadow: -1px 4px 8px #5d54a3;
+  text-align: center;
+  border-radius: 4px;
+}
+
+form {
+  background-color: white;
+  margin-top: 16px;
+  padding: 16px;
+  box-shadow: -1px 4px 8px #747474;
+  border-radius: 4px;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #b9b9b9;
+  padding: 6px;
+  border-radius: 4px;
+  width: 100%;
+  display: block; /*To occupy all the horizontal space "force line to colaps".*/
+  margin-bottom: 24px;
+  box-sizing: border-box; /*The size is up to the edge, don't take it over.*/
+}
+
+/*Select by attribute (all inputs that the value of the type attribute is file).*/
+input[type="file"]{
+  border: none;
+}
+
+input[type="submit"]{
+  background-color: #37cc8a;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase; /*All text it contains in uppercase.*/
+  box-shadow: 0px 4px 8px #747474;
+  color: white;
+  font-weight: bold;
+  cursor: pointer; /*Changes cursor shape (hand).*/
+}
+
+input[type="checkbox"]{
+  width: auto; /*Get the size needed for your content (this works with some css properties).*/
+  display: initial; /*Take the default display value.*/
+}
+
+/*Styles based in states, in this case they are applied when the element is in a hover state.*/
+input[type="submit"]:hover {
+  background-color: #35c483;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #9999fa; /*online = border outside the borde.*/
+  border: none;
+}
+
+input:invalid {
+  outline-color: #f86562;
+}
+
+main {
+  display: flex;
+  gap: 25px;
+  padding: 24px;
+  margin: 48px auto;
+  width: 75%;
+  min-width: 850px;
+}
+
+main aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 0; /*Putting 0 indicates that it only takes into account the first properties.*/
+}
+
+
+main section {
+  flex: 1.5 1 0;
+  max-width: 480px;
+}
