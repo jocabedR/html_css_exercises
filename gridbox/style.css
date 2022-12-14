@@ -63,6 +63,11 @@ main {
 
 }
 
+.thumbnail:hover article {
+  opacity: 1;
+  top: 0;
+}
+
 .thumbnail {
   position: relative; /*To overlaps the article above its container.*/
   border-radius: 4px;
