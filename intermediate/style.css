@@ -20,6 +20,7 @@ body {
 
 .home-layout .home-layout-content {
   height: 100%;
+  overflow-y: hidden; /*Don't permit to overflow the content*/ /* 1. To just scroll in ISSUE-LIST */
 }
 
 #profile-box {
@@ -47,4 +48,157 @@ body {
   position: absolute;
   left: calc(50% - 37px);
   top: -37px;
+}
+
+.tag {
+  padding: calc(var(--space-unit) * .5) var(--space-unit);
+  background-color: var(--bg-tag-color);
+  color: var(--link-color);
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  font-size: var(--text-sm);
+}
+
+.tag:hover {
+  background-color: var(--link-color);
+  color: var(--bg-tag-color);
+}
+
+#tag-box {
+  display: flex;
+  flex-wrap: wrap; /*To colapse a row.*/
+  align-content: space-between;
+  justify-content: space-between;
+  height: 120px;
+}
+
+#roadmap-box ul{
+  padding-inline-start: calc(var(--space-unit) * 2);
+  margin-top: var(--space-unit);
+}
+
+#roadmap-box ul > li {
+  padding-left: var(--space-unit);
+  letter-spacing: 1px;
+  font-size: var(--text-default);
+}
+
+#roadmap-box ul>li span {
+  font-weight: bold;
+  font-size: var(--text-leg);
+}
+
+.flex-row-spb-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+/*To change bullet color.*/
+#roadmap-box ul > li::marker {
+  font-size: 18px;
+}
+
+#roadmap-box ul > li:nth-child(1)::marker {
+  color: var(--todo-color);
+}
+
+#roadmap-box ul > li:nth-child(2)::marker {
+  color: var(--doing-color);
+}
+
+#roadmap-box ul > li:nth-child(3)::marker {
+  color: var(--done-color);
+}
+
+.issues-nav-header {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.text-sm {
+  font-size: var(--text-sm);
+}
+
+.issues-nav-header select {
+  background-color: var(--dark-color);
+  border: none;
+  color: white;
+}
+
+.issues-nav-header select:focus {
+  border: none;
+  outline: none;
+}
+
+.button-primary {
+  background-color: var(--doing-color);
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: calc(var(--space-unit) * .5) var(--space-unit);
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  text-decoration: none; /*To don't underline the link*/
+  font-size: var(--text-sm);
+}
+
+.button-primary:hover {
+  background-color: var(--doing-hover-color);
+}
+
+.issue {
+  display: flex;
+  align-items: flex-start;
+  column-gap: calc(var(--space-unit) * 5);
+}
+
+.issues-list-container {
+  margin-top: calc(var(--space-unit) * 3);
+  /* padding-right: calc(var(--space-unit) * 2); ---> in case overflow-y: scroll*/
+  height: calc(100% - 145px); /* 2. To just scroll in ISSUE-LIST */
+  overflow-y: auto; /* 3. To just scroll in ISSUE-LIST */
+}
+
+.issue .comments {
+  margin-left: auto;
+  align-self: center; /*Aligning vertically, just the component with this class.*/
+}
+
+.votes-tile {
+  background-color: #F2F4FE;
+  padding: var(--space-unit);
+  border-radius: 8px;
+  color: var(--dark-color);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* SCROLL BAR */
+/*"-" before means that is a prefix*/
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/*"Pull" of the scroll.*/
+::-webkit-scrollbar-track {
+  background: #f1f1f17c;
+}
+
+/*Indicates scroll position, genaral. usally, are new functions.
+"-webkit" use it for Chrome, Edge and Safori;
+"-moz" for Mozilla;
+"-o" for Opera*/
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.47);
 }
