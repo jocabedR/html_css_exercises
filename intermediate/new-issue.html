@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- FONT FAMILY-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>New Issue</title>
+  <link rel="stylesheet" href="new-issue.css">
+</head>
+
+<body class="issue-form-layout"></body>
+  <header class="box flex-row-spb-center">
+    <a href="./index.html">👈 Go back</a>
+  </header>
+  <main>
+      <form action="http://any-url.com/register.php" method="POST" class="box">
+        <labe><h1>Create a new Issue</h1></label>
+        <label for="issue-title">
+          Issue title
+          <input type="text" name="issue-title" id="issue-title" placeholder="Add a short description or headline">
+        </label>
+        <label for="state">
+          Issue status
+          <select name="state" id="state">
+            <option value="">Select issue state</option>
+            <option value="to-do">To do</option>
+            <option value="doing">Doing</option>
+            <option value="done">Done</option>
+          </select>
+        </label>
+        <label for="category">
+          Category
+          <select name="category" id="category">
+            <option value="">Choose a category for your issue</option>
+            <option value="Feature">Feature</option>
+            <option value="UI">UI</option>
+            <option value="UX">UX</option>
+            <option value="Enhancement">Enhancement</option>
+            <option value="Bug">Bug</option>
+          </select>
+        </label>
+        <label for="description">
+          Issue Detail
+          <textarea name="description" id="description" cols="30" rows="10" placeholder="Include any specific comments on what should be improved, added, etc."></textarea>
+        </label>
+        <div class="group-buttons">
+          <button id="delete-button" class="button-danger">Delete</button>
+          <button id="cancel-button" class="button-secondary">Cancel</button>
+          <input type="submit" value="Add Issue" id="add-issue-button" class="button-primary">
+        </div>
+      </form>
+  </main>
+</body>
+
+</html>

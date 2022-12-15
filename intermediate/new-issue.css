@@ -1,0 +1,62 @@
+@import './style.css';
+
+.issue-form-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: calc(var(--space-unit) * 7);
+  max-width: 720px;
+  margin: calc(var(--space-unit) * 3) auto;
+}
+
+label {
+  font-weight: bold;
+}
+
+label > * {
+  font-weight: normal;
+}
+
+input,
+textarea,
+select {
+  background-color: var(--light-color);
+  border: none;
+  padding: var(--space-unit);
+  border-radius: var(--space-unit);
+  width: 100%;
+  margin: var(--space-unit) 0;
+  box-sizing: border-box;
+  color: var(--dark-color);
+}
+
+#add-issue-button {
+  width:fit-content;
+}
+
+#cancel-button {
+  margin-left: 340px;
+}
+
+.group-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #9999fa;
+  border: none;
+}
+
+input:invalid {
+  outline-color: var(--danger-hover-color);
+}
+
+main{
+  max-width: 600px;
+  height: 100%;
+}
