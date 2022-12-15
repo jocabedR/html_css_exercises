@@ -23,6 +23,14 @@
       </p>
     </aside>
 
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <h3>Your information has been sended!</h3>
+      </div>
+    </div>
+
     <section>
       <p class="callout">
         <strong>Try it free 7 seven days</strong> then $20/mo. thereather
@@ -45,10 +53,13 @@
           Do you agree?
           <input type="checkbox" name="agree" id="agree">
         </label>
-        <input type="submit" value="Claim your free trivial">
+        <!-- <input type="submit" value="Claim your free trivial"> -->
+        <br>
+        <button type="button" id="myButton">Claim your free trivial</button>
+
       </form>
     </section>
-    
+    <script src="modal.js"></script>
   </main>
 </body>
 
