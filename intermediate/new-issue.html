@@ -11,22 +11,32 @@
    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <title>New Issue</title>
   <link rel="stylesheet" href="new-issue.css">
+  <link rel="stylesheet" href="modal.js">
 </head>
 
 <body class="issue-form-layout"></body>
   <header class="box flex-row-spb-center">
     <a href="./index.html">👈 Go back</a>
   </header>
+
   <main>
-      <form action="http://any-url.com/register.php" method="POST" class="box">
+     <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <span class="close">&times;</span>
+      <div class="modal-content">
+        <h3>The issue has been created!</h3>
+      </div>
+    </div>
+      <form action="" method="" class="box" id="issue-form">
         <labe><h1>Create a new Issue</h1></label>
-        <label for="issue-title">
+        <label for="title">
           Issue title
-          <input type="text" name="issue-title" id="issue-title" placeholder="Add a short description or headline">
+          <input required type="text" name="title" id="title" placeholder="Add a short description or headline">
         </label>
         <label for="state">
           Issue status
-          <select name="state" id="state">
+          <select name="state" id="state" required>
             <option value="">Select issue state</option>
             <option value="to-do">To do</option>
             <option value="doing">Doing</option>
@@ -35,7 +45,7 @@
         </label>
         <label for="category">
           Category
-          <select name="category" id="category">
+          <select name="category" id="category" required>
             <option value="">Choose a category for your issue</option>
             <option value="Feature">Feature</option>
             <option value="UI">UI</option>
@@ -46,14 +56,17 @@
         </label>
         <label for="description">
           Issue Detail
-          <textarea name="description" id="description" cols="30" rows="10" placeholder="Include any specific comments on what should be improved, added, etc."></textarea>
+          <textarea name="description" id="description" cols="30" rows="10" 
+          placeholder="Include any specific comments on what should be improved, added, etc." required></textarea>
         </label>
         <div class="group-buttons">
-          <button id="delete-button" class="button-danger">Delete</button>
-          <button id="cancel-button" class="button-secondary">Cancel</button>
-          <input type="submit" value="Add Issue" id="add-issue-button" class="button-primary">
+          <button type='button' id="delete-button" class="button-danger">Delete</button>
+          <button type='button' id="cancel-button" class="button-secondary">Cancel</button>
+          <button type='button' id="add-issue-button" class="button-primary">Add Issue</button>
+          <!-- <input type="submit" value="Add Issue" id="add-issue-button" class="button-primary"> -->
         </div>
       </form>
+      <script src="modal.js"></script>
   </main>
 </body>
 
