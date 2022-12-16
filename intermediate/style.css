@@ -74,9 +74,9 @@ body {
   height: 120px;
 }
 
-#roadmap-box ul{
-  padding-inline-start: calc(var(--space-unit) * 2);
-  margin-top: var(--space-unit);
+#roadmap-box ul {
+  padding-inline-start: calc(var(--space-unit) * 2); /*Change bullet tab's.*/
+  margin-top: calc(var(--space-unit) * 1);
 }
 
 #roadmap-box ul > li {
@@ -114,6 +114,7 @@ body {
 }
 
 .issues-nav-header {
+  text-decoration: none;
   background-color: var(--dark-color);
   color: white;
 }
@@ -205,6 +206,7 @@ body {
 .votes-tile {
   background-color: #F2F4FE;
   padding: var(--space-unit);
+  margin-top: calc(var(--space-unit) / 2);
   border-radius: 8px;
   color: var(--dark-color);
   font-weight: bold;
@@ -235,4 +237,15 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(85, 85, 85, 0.47);
+}
+
+a:hover { 
+  color: var(--doing-hover-color);
+  cursor: pointer;
+}
+
+.issues-nav-header a:visited {
+  color: white;  
+  font-family: arial; 
+  text-decoration: none 
 }

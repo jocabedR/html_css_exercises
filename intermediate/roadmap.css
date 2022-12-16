@@ -11,11 +11,52 @@
   column-gap: 30px;
 }
 
-.roadmap-container main {
-  margin-top: calc(var(--space-unit) * 3);
+ul {
+  padding-inline-start: calc(var(--space-unit) * 2); /*Change bullet tab's.*/
+  margin-top: var(--space-unit);
 }
 
-.roadmap-container main .issues-column>small {
-  display: block;
-  margin-bottom: calc(var(--space-unit) * 2);
+ul > li {
+  padding-left: var(--space-unit);
+  letter-spacing: 1px;
+  font-size: var(--text-default);
+}
+
+/*To change bullet color.*/
+ ul > li::marker {
+  font-size: 18px;
+  padding-inline-start: calc(var(--space-unit) * 2); /*Change bullet tab's.*/
+}
+
+.to-do {
+  box-shadow: 0px -4px var(--todo-color);
+}
+
+.doing {
+  box-shadow: 0px -4px var(--doing-color);
+}
+
+.done {
+  box-shadow: 0px -4px var(--done-color);
+}
+
+.to-do ul > li::marker {
+  color: var(--todo-color);
+}
+
+.doing ul > li::marker {
+  color: var(--doing-color);
+}
+
+.done ul > li::marker {
+  color: var(--done-color);
+}
+
+article{
+  margin-top: calc(var(--space-unit) / 2);
+}
+
+.tile {
+  flex-direction: row;
+  margin-top: var(--space-unit);
 }

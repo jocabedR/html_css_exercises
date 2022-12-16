@@ -1,5 +1,10 @@
 @import './style.css';
 
+.new-issue-container {
+  margin: calc(var(--space-unit) * 5) auto 0;
+  max-width: 900px;
+}
+
 .issue-form-layout {
   display: flex;
   flex-direction: column;
