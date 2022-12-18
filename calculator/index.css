@@ -8,6 +8,7 @@ body {
 .container {
     border-radius: 0.2em;
     margin: auto;
+    margin-top: 3em;
     background-color: #242e45;
     width: 400px;
     height: 500px;
@@ -35,6 +36,7 @@ button{
     border: none;
     border-radius: 2px;
     height: 100%;
+    font-size: x-large;
 }
 
 button:active{
@@ -61,6 +63,8 @@ button:active{
 #del, #reset {
     background-color: #64729a;
     box-shadow: 0.1em 0.2em #516085;
+    color: #ebe3dc;
+    font-weight: bold;
 }
 
 #del:active, #reset:active {
@@ -71,6 +75,8 @@ button:active{
 #equal {
     background-color: rgb(230, 77, 77);
     box-shadow: 0.1em 0.2em rgb(192, 63, 63);
+    color: #ebe3dc;
+    font-weight: bold;
 } 
 
 #equal:active {
