@@ -102,3 +102,11 @@ input[type='radio']{
 .selected:nth-child(2){
     margin-left: 1em;
 }
+
+.selected:nth-child(3){
+    margin-left: 0.5em;
+}
+
+.selected:nth-child(4){
+    margin-left: 0.5em;
+}
